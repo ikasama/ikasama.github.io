@@ -1,3 +1,8 @@
 .wrapper {
   padding: 0 64px 4em;
 }
+body {
+  color: #333;
+  font-family:Arial, sans-serif;
+  line-height: 1.4em;
+}
