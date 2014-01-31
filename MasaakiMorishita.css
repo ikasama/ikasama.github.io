@@ -4,7 +4,6 @@ body {
   font-size: 18px;
   line-height: 1.4em;
   padding: 20px 64px 4em;
-  width: 100%;
 }
 
 section {
@@ -23,3 +22,4 @@ h1 {
 }
 li {
   margin-bottom: 10px;
+}
