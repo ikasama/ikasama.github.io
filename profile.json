@@ -14,20 +14,25 @@
   },
 
   "links": [
-    "http://blog.morishitter.com": {
+    {
+      "url": "http://blog.morishitter.com",
       "name": "No web, No life."
     },
-    "http://morishitter.hatenablog.com": {
+    {
+      "url": "http://morishitter.hatenablog.com",
       "name": "Hatena Blog"
     },
-    "http://b.hatena.ne.jp/morishitter": {
+    {
+      "url": "http://b.hatena.ne.jp/morishitter",
       "name": "Hatena Bookmark"
     },
-    "https://github.com/morishitter": {
+    {
+      "url": "https://github.com/morishitter",
       "name": "GitHub",
       "account_name": "morishitter"
     },
-    "http://twitter.com/_morishitter": {
+    {
+      "url": "http://twitter.com/_morishitter",
       "name": "Twitter",
       "account_name": "_morishitter"
     }
