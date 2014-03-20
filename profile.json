@@ -1,0 +1,35 @@
+{
+  "about": {
+    "name": "Masaaki Morishita",
+    "birthday": "1990/08/30",
+    "school": {
+      "name": "Wakayama Univ",
+      "laboratory": "Software Design Lab"
+    },
+    "language": [
+      "Ruby",
+      "JavaScript",
+      "PHP"
+    ]
+  },
+
+  "links": [
+    "http://blog.morishitter.com": {
+      "name": "No web, No life."
+    },
+    "http://morishitter.hatenablog.com": {
+      "name": "Hatena Blog"
+    },
+    "http://b.hatena.ne.jp/morishitter": {
+      "name": "Hatena Bookmark"
+    },
+    "https://github.com/morishitter": {
+      "name": "GitHub",
+      "account_name": "morishitter"
+    },
+    "http://twitter.com/_morishitter": {
+      "name": "Twitter",
+      "account_name": "_morishitter"
+    }
+  ]
+}
