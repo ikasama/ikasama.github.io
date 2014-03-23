@@ -16,5 +16,11 @@
     "Profile"
   ],
   "author": "Masaaki Morishita",
-  "gitHead": "0079f6df229d0d0416e22e81d5535d7f8779beda"
+  "gitHead": "0079f6df229d0d0416e22e81d5535d7f8779beda",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-connect": "^0.7.1",
+    "grunt-csso": "^0.6.1"
+  }
 }
