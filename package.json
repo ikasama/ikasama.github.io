@@ -1,14 +1,14 @@
 {
   "name": "morishitter.github.io",
   "version": "0.0.0",
-  "description": "",
+  "description": "Masaaki Morishita's profile page",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ikasama/ikasama.github.io.git"
+    "url": "git://github.com/morishitter/morishitter.github.io.git"
   },
   "keywords": [
     "Masaaki",
@@ -16,6 +16,5 @@
     "Profile"
   ],
   "author": "Masaaki Morishita",
-  "license": "BSD",
   "gitHead": "0079f6df229d0d0416e22e81d5535d7f8779beda"
 }
