@@ -1,0 +1,62 @@
+<!doctype html>
+<html data-ng-app="YouJukeMix">
+  <head>
+    <meta charset="utf-8"> 
+    <title>YouJukeMix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="app.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+
+  <body data-ng-controller="VideosController" onLoad="document.searchForm.q.focus()">
+    <header>
+      <h1 class="appname">YouJukeMix</h1>
+      <form id="search" name="searchForm" data-ng-submit="search()">
+        <input id="query" name="q" type="text" placeholder="Search for a YouTube video" data-ng-model="query">
+        <input id="submit" type="image" src="search.png" alt="Search">
+      </form>
+      <!--
+      <nav>
+        <a id="play">{{ youtube.state }}</a>
+        <a id="pause">Pause</a>
+      </nav>
+      -->
+    </header>
+
+    <div class="container">
+    <div id="results">
+      <div class="video" data-ng-repeat="video in results" data-ng-click="queue(video.id, video.title, youtube.state)">
+        <img class="video-image" data-ng-src="{{ video.thumbnail }}">
+        <p class="video-title">{{ video.title }}</p>
+        <!--<p class="video-author">{{ video.author }}</p>-->
+        <p class="video-description">{{ video.description }}</p>
+      </div>
+    </div>
+
+    <div class="sidebar">
+    <div id="player">
+      <div id="placeholder"></div>
+    </div>
+
+    <div id="playlist">
+      <p id="current">{{ youtube.videoTitle }}</p>
+      <ol id="upcoming" data-ng-show="playlist">
+        <li data-ng-repeat="video in upcoming">
+          <p class="item-title" data-ng-click="launch(video.id, video.title)">{{video.title}}</p>
+          <p class="item-delete" data-ng-click="delete('upcoming', video.id)">Delete</p>
+        </li>
+      </ol>
+    </div>
+    </div>
+
+    <footer>
+      <small>Copyright &copy; 2014 <a href="http://twitter.com/m0rishitter">@m0rishitter</a>
+    </footer>
+    </div>
+
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
