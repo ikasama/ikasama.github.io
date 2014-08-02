@@ -28,22 +28,13 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
   };
   var results = [];
   var upcoming = [];
-  var history = [];
 
   $window.onYouTubeIframeAPIReady = function () {
-    // $log.info('Youtube API is ready');
     youtube.ready = true;
     service.bindPlayer('placeholder');
     service.loadPlayer();
     $rootScope.$apply();
   };
-
-  function onYoutubeReady (event) {
-    // $log.info('YouTube Player is ready');
-    youtube.player.cueVideoById(history[0].id);
-    youtube.videoId = history[0].id;
-    youtube.videoTitle = history[0].title;
-  }
 
   function onYoutubeStateChange (event) {
     if (event.data == YT.PlayerState.PLAYING) {
@@ -60,12 +51,12 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
   }
 
   this.bindPlayer = function (elementId) {
-    // $log.info('Binding to ' + elementId);
+    $log.info('Binding to ' + elementId);
     youtube.playerId = elementId;
   };
 
   this.createPlayer = function () {
-    // $log.info('Creating a new Youtube player for DOM id ' + youtube.playerId + ' and video ' + youtube.videoId);
+    $log.info('Creating a new Youtube player for DOM id ' + youtube.playerId + ' and video ' + youtube.videoId);
     return new YT.Player(youtube.playerId, {
       height: youtube.playerHeight,
       width: youtube.playerWidth,
@@ -74,7 +65,6 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
         showinfo: 0
       },
       events: {
-        'onReady': onYoutubeReady,
         'onStateChange': onYoutubeStateChange
       }
     });
@@ -138,11 +128,6 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
   this.getUpcoming = function () {
     return upcoming;
   };
-
-  this.getHistory = function () {
-    return history;
-  };
-
 }]);
 
 
@@ -159,7 +144,7 @@ app.controller('VideosController', function ($scope, $http, $log, VideosService)
 
     $scope.launch = function (id, title) {
       VideosService.launchPlayer(id, title);
-      // $log.info('Launched id:' + id + ' and title:' + title);
+      $log.info('Launched id:' + id + ' and title:' + title);
     };
 
     $scope.queue = function (id, title, state) {
@@ -167,7 +152,7 @@ app.controller('VideosController', function ($scope, $http, $log, VideosService)
       if (state === "stopped") {
         VideosService.launchPlayer(id, title);
       }
-      // $log.info('Queued id:' + id + ' and title:' + title);
+      $log.info('Queued id:' + id + ' and title:' + title);
     };
 
     $scope.delete = function (list, id) {
@@ -179,8 +164,10 @@ app.controller('VideosController', function ($scope, $http, $log, VideosService)
         params: {
           key: 'AIzaSyDo5Xhj4cJBTpG1Uogx6bur14BCRRP8t4c',
           type: 'video',
+          mine: 'true',
           maxResults: '25',
           part: 'id,snippet',
+          //part: 'snippet,fileDetails',
           fields: 'items/id,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle',
           q: this.query
         }
