@@ -28,6 +28,7 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
   };
   var results = [];
   var upcoming = [];
+  var current_index = 0;
 
   $window.onYouTubeIframeAPIReady = function () {
     youtube.ready = true;
@@ -43,9 +44,13 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
       youtube.state = 'paused';
     } else if (event.data == YT.PlayerState.ENDED) {
       youtube.state = 'ended';
-      service.launchPlayer(upcoming[0].id, upcoming[0].title);
-      // service.archiveVideo(upcoming[0].id, upcoming[0].title);
-      // service.deleteVideo(upcoming, upcoming[0].id);
+      var index = service.getCurrentIndex(upcoming, youtube.videoId);
+      index++;
+      if (upcoming[index]) {
+        service.launchPlayer(upcoming[index].id, upcoming[index].title);
+      } else {
+        service.launchPlayer(upcoming[0].id, upcoming[0].title);
+      }
     }
     $rootScope.$apply();
   }
@@ -116,6 +121,15 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
       }
     }
   };
+
+  this.getCurrentIndex = function (list, id) {
+    for (var i = 0; i <= list.length; i++) {
+        if (list[i].id === id) {
+            return i;
+        }
+    }
+    return null;
+  }
 
   this.getYoutube = function () {
     return youtube;
