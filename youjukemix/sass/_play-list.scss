@@ -1,5 +1,6 @@
 @import 'config/colors';
 @import 'config/constant';
+@import 'config/constant';
 
 
 .play-list {
@@ -16,7 +17,7 @@
 #playlist {
   background: $black;
   color: lighten($black, 40%);
-  height: 680px - $player-height;
+  height: $content-height - $player-height;
 
   ol {
     cursor: pointer;
