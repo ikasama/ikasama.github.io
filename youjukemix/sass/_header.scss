@@ -1,0 +1,42 @@
+@import 'config/colors';
+@import 'config/fonts';
+
+header {
+  background: $base;
+  color: $white;
+  height: 55px;
+  padding: 10px;
+}
+
+
+.app-name {
+  float: left;
+  font-size: 22px;
+}
+
+
+#search {
+  position: relative;
+  float: right;
+  width: 460px;
+}
+
+#query {
+  background: darken($base, 20%);
+  border: none;
+  border-radius: 20px;
+  color: $white;
+  font-size: $font-md;
+  padding: 8px;
+  width: 440px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#submit {
+  position: absolute;
+  right: 20px;
+  top: 3px;
+}

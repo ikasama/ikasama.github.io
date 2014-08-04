@@ -187,13 +187,15 @@ nav{
 }
 
 .playlist-item {
+  width: 280px;
 }
 
 .item-title{
   border-top: 1px solid #33363f;
   padding: 8px 20px;
   float: left;
-  width: 180px;
+  /*width: 180px;*/
+  width: 70%;
   overflow: hidden;
   height: 24px;
   line-height: 1.4;
@@ -211,7 +213,8 @@ nav{
   float: right;
   text-align: center;
   padding: 10px 0;
-  width: 60px;
+  /*width: 60px;*/
+  width: 30%;
   height: 20px;
 }
 .item-delete:hover{

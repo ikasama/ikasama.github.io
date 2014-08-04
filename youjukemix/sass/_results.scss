@@ -1,0 +1,45 @@
+@import 'config/colors';
+@import 'config/fonts';
+
+
+#results {
+  float: right;
+  overflow-x: hidden;
+  background: $white;
+  width: $content-width - $player-width;
+  height: 680px;
+}
+
+
+$result-list-height: 100px;
+
+.video {
+  cursor: pointer;
+  height: $result-list-height;
+  padding: 5px 0;
+  padding-right: 15px;
+
+  &:nth-child(2n-1) {
+    background: darken($white, 5%);
+  }
+
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+}
+
+.video-image {
+  float: left;
+  margin: 0 10px;
+}
+
+.video-title {
+  font-size: $font-md;
+  padding: 5px 0;
+}
+
+.video-description {
+  color: lighten($black, 30%);
+  font-size: $font-sm;
+}

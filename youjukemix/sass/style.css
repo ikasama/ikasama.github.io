@@ -186,10 +186,21 @@ nav{
   cursor: pointer;
 }
 
+.playlist-item {
+  width: 280px;
+}
+
 .item-title{
+  border-top: 1px solid #33363f;
   padding: 8px 20px;
   float: left;
-  width: 150px;
+  /*width: 180px;*/
+  width: 70%;
+  overflow: hidden;
+  height: 24px;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .item-title:hover{
   background: #1171A2;
@@ -197,11 +208,14 @@ nav{
 }
 
 .item-delete{
+  border-top: 1px solid #33363f;
   color: #ac0809;
   float: right;
   text-align: center;
   padding: 10px 0;
-  width: 60px;
+  /*width: 60px;*/
+  width: 30%;
+  height: 20px;
 }
 .item-delete:hover{
   background: #ac0809;
@@ -210,18 +224,23 @@ nav{
 
 footer{
   clear: both;
-  color: #888;
+  color: #fff;
   font-size: 16px;
   padding: 20px 0;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   text-align: center;
+  background: #E85298;
 }
 
 footer small{
   font-style: normal;
 }
-footer a{ color: #666;}
-footer a:hover{ color: #444;}
+footer a{
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #A33A6B;
+}
 
 ::-webkit-input-placeholder{ color: #e6e6e6;}
 :-moz-placeholder{ color: #e6e6e6;}
