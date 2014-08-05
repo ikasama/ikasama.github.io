@@ -18,6 +18,8 @@
   background: $black;
   color: lighten($black, 40%);
   height: $content-height - $player-height;
+  overflow: hidden;
+  overflow-y: scroll;
 
   ol {
     cursor: pointer;
