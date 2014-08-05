@@ -40,6 +40,7 @@
 
 
 .playlist-item {
+  display: table;
   width: $player-width;
   overflow-y: scroll;
 }
@@ -48,6 +49,8 @@ $play-list-height: 30px;
 $delete-btn-width: 60px;
 
 .item-delete {
+  display: table-cell;
+  vertical-align: middle;
   float: right;
   padding: 5px;
   color: $red;
@@ -62,7 +65,10 @@ $delete-btn-width: 60px;
 }
 
 .item-title {
+  display: table-cell;
+  vertical-align: middle;
   width: $player-width - $delete-btn-width;
+  max-width: $player-width - $delete-btn-width;
   height: $play-list-height;
   padding: 5px;
   overflow: hidden;

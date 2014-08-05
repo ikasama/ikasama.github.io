@@ -110,10 +110,13 @@ header {
   font-size: 15px; }
 
 .playlist-item {
+  display: table;
   width: 280px;
   overflow-y: scroll; }
 
 .item-delete {
+  display: table-cell;
+  vertical-align: middle;
   float: right;
   padding: 5px;
   color: #ac0809;
@@ -125,7 +128,10 @@ header {
     color: white; }
 
 .item-title {
+  display: table-cell;
+  vertical-align: middle;
   width: 220px;
+  max-width: 220px;
   height: 30px;
   padding: 5px;
   overflow: hidden;

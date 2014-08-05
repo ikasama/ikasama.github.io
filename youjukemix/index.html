@@ -34,8 +34,8 @@
           <ol id="upcoming" data-ng-show="playlist">
             <li data-ng-repeat="video in upcoming">
               <div class="playlist-item clearfix">
-                <div class="item-delete" data-ng-click="delete('upcoming', video.id)">Delete</div>
                 <div class="item-title" data-ng-click="launch(video.id, video.title)">{{video.title}}</div>
+                <div class="item-delete" data-ng-click="delete('upcoming', video.id)">Delete</div>
               </div>
             </li>
           </ol>
