@@ -5,6 +5,7 @@
     <title>YouJukeMix</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" type="text/css">
     <link rel="stylesheet" href="app.css" type="text/css">
     <link rel="icon" href="favicon.png">
@@ -35,7 +36,7 @@
             <li data-ng-repeat="video in upcoming">
               <div class="playlist-item clearfix">
                 <div class="item-title" data-ng-click="launch(video.id, video.title)">{{video.title}}</div>
-                <div class="item-delete" data-ng-click="delete('upcoming', video.id)">Delete</div>
+                <div class="item-delete" data-ng-click="delete('upcoming', video.id)"><span class="fa fa-times"></span></div>
               </div>
             </li>
           </ol>

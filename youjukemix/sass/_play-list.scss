@@ -19,7 +19,7 @@
   color: lighten($black, 40%);
   height: $content-height - $player-height;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   ol {
     cursor: pointer;
@@ -44,7 +44,6 @@
 .playlist-item {
   display: table;
   width: $player-width;
-  overflow-y: scroll;
 }
 
 $play-list-height: 30px;
@@ -56,13 +55,17 @@ $delete-btn-width: 60px;
   float: right;
   padding: 5px;
   color: $red;
-  text-align: center;
+  //text-align: center;
   width: $delete-btn-width;
   height: $play-list-height;
 
   &:hover {
     background: $red;
     color: $white;
+  }
+
+  .fa-times {
+    padding-left: 10px;
   }
 }
 

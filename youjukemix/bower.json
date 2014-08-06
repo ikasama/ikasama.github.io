@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "angular": "1.2.1",
-    "normalize.css": "*"
+    "normalize.css": "*",
+    "fontawesome": "~4.1.0"
   }
 }
