@@ -1,26 +1,10 @@
 {
   "name": "morishitter.github.io",
-  "version": "0.0.0",
   "description": "Masaaki Morishita's profile page",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/morishitter/morishitter.github.io.git"
   },
-  "keywords": [
-    "Masaaki",
-    "Morishita",
-    "Profile"
-  ],
-  "author": "Masaaki Morishita",
-  "gitHead": "0079f6df229d0d0416e22e81d5535d7f8779beda",
-  "devDependencies": {
-    "grunt": "^0.4.4",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-contrib-connect": "^0.7.1",
-    "grunt-csso": "^0.6.1"
-  }
+  "author": "Masaaki Morishita"
 }
