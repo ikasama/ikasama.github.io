@@ -2,9 +2,15 @@
   "name": "morishitter.github.io",
   "description": "Masaaki Morishita's profile page",
   "main": "index.html",
+  "scripts": {
+    "compress:css": "csswring style.css style.min.css"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/morishitter/morishitter.github.io.git"
   },
-  "author": "Masaaki Morishita"
+  "author": "Masaaki Morishita",
+  "devDependencies": {
+    "csswring": "^6.0.2"
+  }
 }
