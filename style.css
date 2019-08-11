@@ -1,76 +1,60 @@
-html {
-  font-size: 62.5%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  line-height: 1.8;
-  color: #444;
+  color: #000;
   background-color: #fff;
-  font-size: 1.6rem;
+  font-size: 16px;
+  line-height: 32px;
+  font-family: Helvetica, sans-serif;
+  min-height: 100vh;
+  border: 16px solid currentColor;
+  padding: 32px 16px;
+  position: relative;
 }
 
-html,
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(1.5em);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.container {
-  max-width: 620px;
-  margin: 0 auto;
-  animation: fadeIn 0.5s ease-in;
-}
-
-.inner {
-  margin: 0 1em;
-}
-
-section {
-  margin: 3em 0;
-}
-
-header {
-  margin: 4em 0;
-}
-
-header > h1 {
-  font-size: 1.6em;
-}
-
-h1 {
-  font-size: 1.2em;
-  margin: 1.6em 0 0.8em;
-}
-
-h2 {
-  font-size: 1em;
-  margin: 1.6em 0 0.8em;
-}
-
-h1 + h2 {
-  margin-top: 0.8em;
-}
-
-li {
-  margin-bottom: 1em;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   color: inherit;
 }
 
-a:focus {
-  outline: 5px auto #aaa;
+.bottom {
+  margin-top: 64px;
+}
+
+@media (max-width: 450px) {
+  .bottom {
+    position: absolute;
+    bottom: 32px;
+  }
+}
+
+.who {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.what {
+  font-size: 20px;
+}
+
+.mail::after {
+  content: "morishitter@gmail.com";
+}
+
+.links {
+  display: flex;
+}
+
+.links li:not(:first-child) {
+  margin-left: 1em;
 }
